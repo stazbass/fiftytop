@@ -1,7 +1,9 @@
-package com.stzbzz.top50;
+package com.stzbzz.top50.steps;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import com.stzbzz.top50.Solution;
 
 public class Step01 implements Solution {
     @Override
