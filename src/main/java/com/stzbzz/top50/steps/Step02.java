@@ -8,7 +8,7 @@ public class Step02 implements Solution {
         return " A prime number";
     }
 
-    boolean isPrime(long num){
+    public static boolean isPrime(long num){
         for(long i = 2; i < num; i++){
             if( (num % i) == 0)return false;
         }
