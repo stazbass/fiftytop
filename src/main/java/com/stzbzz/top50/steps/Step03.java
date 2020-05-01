@@ -2,6 +2,8 @@ package com.stzbzz.top50.steps;
 
 import com.stzbzz.top50.Solution;
 
+import java.util.stream.Stream;
+
 public class Step03 implements Solution {
     @Override
     public String toString() {
@@ -23,6 +25,9 @@ public class Step03 implements Solution {
 
     @Override
     public void run() {
-
+        String [] testStrings = new String[]{"b", "bb", "bob", "bobs", "sbob", "sbobs", "sbobS"};
+        Stream.of(testStrings).forEach(testString->{
+            System.out.println("String " + '"' + testString +'"' + (isPalindrome(testString)?" is palindrome":" isn't palindrome"));
+        });
     }
 }
