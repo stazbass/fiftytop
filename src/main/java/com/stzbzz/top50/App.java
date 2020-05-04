@@ -6,6 +6,7 @@ import java.util.List;
 import com.stzbzz.top50.steps.Step02;
 import com.stzbzz.top50.steps.Step03;
 import com.stzbzz.top50.steps.Step04;
+import com.stzbzz.top50.steps.Step05;
 
 /**
  * Hello world!
@@ -18,6 +19,7 @@ public class App {
         solutions.add(new Step02());
         solutions.add(new Step03());
         solutions.add(new Step04());
+        solutions.add(new Step05());
         solutions.stream().forEach(solution->{
             System.out.println("-------------------");
             System.out.println(solution);
