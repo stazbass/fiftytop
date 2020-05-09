@@ -2,18 +2,11 @@ package com.stzbzz.top50.steps;
 
 import com.stzbzz.top50.Solution;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-
 public class Step06 implements Solution {
     @Override
     public String toString() {
-        return "Avoiding deadlock in Java";
+        return "Deadlock in Java";
     }
-
-    static Long value = 0L;
 
     public static class Deadlocker{
         public void methodOne(){

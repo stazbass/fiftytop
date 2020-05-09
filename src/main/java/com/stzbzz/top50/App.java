@@ -17,6 +17,7 @@ public class App {
 //        solutions.add(new Step03());
 //        solutions.add(new Step04());
 //        solutions.add(new Step05());
+//        solutions.add(new Step06());
         solutions.add(new Step07());
         solutions.stream().forEach(solution->{
             System.out.println("-------------------");
