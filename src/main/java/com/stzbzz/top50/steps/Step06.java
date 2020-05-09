@@ -62,6 +62,7 @@ public class Step06 implements Solution {
     }
 
     public static void main(String[] args) {
+        // just don't stop the rock
         Step06 thisObject = new Step06();
 //        thisObject.fallInLock(); //deadly power lock
     }

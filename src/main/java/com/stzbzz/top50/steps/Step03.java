@@ -24,6 +24,7 @@ public class Step03 implements Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println(new Step03().toString());
         String [] testStrings = new String[]{"b", "bb", "bob", "bobs", "sbob", "sbobs", "sbobS"};
         Stream.of(testStrings).forEach(testString->{
             System.out.println("String " + '"' + testString +'"' + (isPalindrome(testString)?" is palindrome":" isn't palindrome"));

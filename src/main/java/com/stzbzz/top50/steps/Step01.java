@@ -12,6 +12,7 @@ public class Step01 implements Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println(new Step01().toString());
         int steps = 30;
         Long prevA = 1L;
         Long prevB = 1L;

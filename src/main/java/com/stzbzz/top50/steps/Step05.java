@@ -22,6 +22,7 @@ public class Step05 implements Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println(new Step05().toString());
         long number = 153;
         System.out.println(number + " " + (isArmstrongNumber(number)?"is":"isn't") + " armstrong number");
         number = 154;

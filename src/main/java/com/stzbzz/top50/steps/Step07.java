@@ -19,6 +19,7 @@ public class Step07 implements Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println(new Step07().toString());
         Stream.of(1,2,3,4,5,6,7,8,9,10).forEach(num->{
             long number = num;
             long factorial = fact(number);

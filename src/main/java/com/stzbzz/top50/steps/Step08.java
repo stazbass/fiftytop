@@ -17,6 +17,7 @@ public class Step08 implements Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println(new Step08().toString());
         String sampleString  = "a b c d e f g";
         String reversedString = getReversed(sampleString);
         System.out.println("String reverse");

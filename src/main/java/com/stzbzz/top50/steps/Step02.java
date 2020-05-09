@@ -16,6 +16,7 @@ public class Step02 implements Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println(new Step02().toString());
         final int maxNumber = 100;
         for(int i = 0; i < 10; i++){
             long number = Math.round(Math.random()*maxNumber);

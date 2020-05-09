@@ -21,6 +21,7 @@ public class Step04 implements Solution {
     }
 
     public static void main(String[] args) {
+        System.out.println(new Step04().toString());
         Integer []testValues = new Integer[]{10002, 1, 11, 102, 103, 303, 0, 1, 11};
         Stream.of(testValues).forEach(testValue->{
             String message = (testValue.equals(reverseInt(testValue))?"palundra":"!palundra");
