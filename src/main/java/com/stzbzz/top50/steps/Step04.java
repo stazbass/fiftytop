@@ -11,7 +11,7 @@ public class Step04 implements Solution {
         return "Integer Palindrome";
     }
 
-    public int reverseInt(int value){
+    public static int reverseInt(int value){
         int result = 0;
         while(value != 0){
             result = (result*10) + value%10;
@@ -20,12 +20,12 @@ public class Step04 implements Solution {
         return result;
     }
 
-    @Override
-    public void run() {
+    public static void main(String[] args) {
         Integer []testValues = new Integer[]{10002, 1, 11, 102, 103, 303, 0, 1, 11};
         Stream.of(testValues).forEach(testValue->{
             String message = (testValue.equals(reverseInt(testValue))?"palundra":"!palundra");
             System.out.println(testValue + " - " + message);
         });
+
     }
 }

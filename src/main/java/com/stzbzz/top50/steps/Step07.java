@@ -2,6 +2,8 @@ package com.stzbzz.top50.steps;
 
 import com.stzbzz.top50.Solution;
 
+import java.util.stream.Stream;
+
 public class Step07 implements Solution {
     @Override
     public String toString() {
@@ -16,9 +18,12 @@ public class Step07 implements Solution {
         return accumulator;
     }
 
-    @Override
-    public void run() {
-        String s = "";
-
+    public static void main(String[] args) {
+        Stream.of(1,2,3,4,5,6,7,8,9,10).forEach(num->{
+            long number = num;
+            long factorial = fact(number);
+            String message = String.format("Number : %0$d fact %0$d", number, factorial);
+            System.out.println(message);
+        });
     }
 }

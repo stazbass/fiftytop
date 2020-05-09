@@ -14,16 +14,13 @@ public class Step02 implements Solution {
         }
         return true;
     }
-    
-    @Override
-    public void run() {
+
+    public static void main(String[] args) {
         final int maxNumber = 100;
         for(int i = 0; i < 10; i++){
             long number = Math.round(Math.random()*maxNumber);
             boolean isPrime = isPrime(number);
             System.out.println("Number " + number + " prime : " + isPrime);
         }
-        
     }
-
 }

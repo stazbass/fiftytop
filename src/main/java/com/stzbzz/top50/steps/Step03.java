@@ -23,8 +23,7 @@ public class Step03 implements Solution {
         return true;
     }
 
-    @Override
-    public void run() {
+    public static void main(String[] args) {
         String [] testStrings = new String[]{"b", "bb", "bob", "bobs", "sbob", "sbobs", "sbobS"};
         Stream.of(testStrings).forEach(testString->{
             System.out.println("String " + '"' + testString +'"' + (isPalindrome(testString)?" is palindrome":" isn't palindrome"));

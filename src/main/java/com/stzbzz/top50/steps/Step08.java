@@ -16,8 +16,11 @@ public class Step08 implements Solution {
         return stringBuilder.toString();
     }
 
-    @Override
-    public void run() {
-
+    public static void main(String[] args) {
+        String sampleString  = "a b c d e f g";
+        String reversedString = getReversed(sampleString);
+        System.out.println("String reverse");
+        System.out.println(sampleString);
+        System.out.println(reversedString);
     }
 }

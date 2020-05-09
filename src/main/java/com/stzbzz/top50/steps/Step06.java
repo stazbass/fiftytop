@@ -28,8 +28,7 @@ public class Step06 implements Solution {
         }
     }
 
-    @Override
-    public void run() {
+    public void fallInLock(){
         Runnable r1 = ()->{
             long runPeriod = 100000;
             long startTime = System.currentTimeMillis();
@@ -60,5 +59,10 @@ public class Step06 implements Solution {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        Step06 thisObject = new Step06();
+//        thisObject.fallInLock(); //deadly power lock
     }
 }

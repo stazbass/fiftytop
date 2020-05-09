@@ -18,8 +18,7 @@ public class Step09 implements Solution {
         return "Remove duplicates from an array";
     }
 
-    @Override
-    public void run() {
+    public static void main(String[] args) {
 
     }
 }

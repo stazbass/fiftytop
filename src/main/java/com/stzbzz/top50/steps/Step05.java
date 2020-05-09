@@ -17,12 +17,11 @@ public class Step05 implements Solution {
         }
     }
 
-    public boolean isArmstrongNumber(long number){
+    public static boolean isArmstrongNumber(long number){
         return number == sumDigitCubes(number);
     }
 
-    @Override
-    public void run() {
+    public static void main(String[] args) {
         long number = 153;
         System.out.println(number + " " + (isArmstrongNumber(number)?"is":"isn't") + " armstrong number");
         number = 154;

@@ -11,8 +11,7 @@ public class Step01 implements Solution {
         return "Fibonacci series";
     }
 
-    @Override
-    public void run() {
+    public static void main(String[] args) {
         int steps = 30;
         Long prevA = 1L;
         Long prevB = 1L;
