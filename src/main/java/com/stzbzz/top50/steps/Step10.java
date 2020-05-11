@@ -10,8 +10,10 @@ public class Step10 implements Solution {
 
     /**
      * *
-     *
-     * @return
+     * * *
+     * * * *
+     * * * * *
+     * @return *
      */
     public static String getPyramidLine(int lineNumber, int height){
         StringBuilder result = new StringBuilder();
