@@ -13,7 +13,7 @@ public class Step17 implements Solution {
     public static int findElement(int [] array, int value){
         int startIndex = 0;
         int endIndex = array.length-1;
-        while( (endIndex - startIndex) > 2){
+        while( (endIndex - startIndex) > 1){
             int middle = startIndex + (endIndex-startIndex)/2;
             if(array[startIndex] == value)return startIndex;
             if(array[endIndex] == value)return endIndex;
@@ -29,6 +29,6 @@ public class Step17 implements Solution {
     }
 
     public static void main(String[] args) {
-        System.out.println(findElement(new int[] {1,2,3,4,5,6,7,8,9,10,11,20,30,40,50,80,100}, 1));
+        System.out.println(findElement(new int[] {1,2,3,4,5,6,7,8,9,10,11,20,30,40,50,80,100}, 4));
     }
 }
