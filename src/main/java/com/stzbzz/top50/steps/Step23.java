@@ -2,6 +2,12 @@ package com.stzbzz.top50.steps;
 
 import java.util.function.Consumer;
 
+/**
+ * Depth-first traversal. Pre-order[NLR]
+ * (N)	Process the current node N itself.
+ * (L)	Recursively traverse N's left subtree.
+ * (R)	Recursively traverse N's right subtree.
+ */
 public class Step23 {
     public static class TreeNode {
         TreeNode(String value) {
@@ -13,12 +19,6 @@ public class Step23 {
         String data;
         TreeNode left;
         TreeNode right;
-
-
-
-        boolean isLeaf() {
-            return (left == null && right == null);
-        }
     }
 
     public static void preOrderTraversal(TreeNode treeNode, Consumer<String> dataConsumer){
