@@ -12,16 +12,16 @@ public class Step24 implements Solution {
         tree.root.left("B1");
         tree.root.right("B2");
 
-        tree.root.left().left("C1");
-        tree.root.left().right("C2");
-        tree.root.right().left("C3");
-        tree.root.right().right("C4");
-        tree.root.right().right().left("D5");
+        tree.root.left().get().left("C1");
+        tree.root.left().get().right("C2");
+        tree.root.right().get().left("C3");
+        tree.root.right().get().right("C4");
+        tree.root.right().get().right().get().left("D5");
 
-        tree.root.left().left().left("D1");
-        tree.root.left().left().right("D2");
-        tree.root.left().right().left("D3");
-        tree.root.left().right().right("D4");
+        tree.root.left().get().left().get().left("D1");
+        tree.root.left().get().left().get().right("D2");
+        tree.root.left().get().right().get().left("D3");
+        tree.root.left().get().right().get().right("D4");
 
         tree.traversePreOrderNR(v -> System.out.printf("%s ",v));
     }

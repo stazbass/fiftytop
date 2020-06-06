@@ -5,16 +5,20 @@ import java.util.Stack;
 import java.util.function.Consumer;
 
 public class Tree<VALUE_TYPE> {
-    Node<VALUE_TYPE> root;
+    Node<VALUE_TYPE>    root;
 
     Tree(VALUE_TYPE rootValue) {
         this.root = Node.of(rootValue);
     }
 
+    Node<VALUE_TYPE> root(){
+        return root;
+    }
+
     static <T> void traverse(Consumer<T> valueProcessor, Node<T> rootNode) {
         valueProcessor.accept(rootNode.value);
-        if (rootNode.left != null) traverse(valueProcessor, rootNode.left());
-        if (rootNode.right != null) traverse(valueProcessor, rootNode.right());
+        if (rootNode.left != null) traverse(valueProcessor, rootNode.left().get());
+        if (rootNode.right != null) traverse(valueProcessor, rootNode.right().get());
     }
 
     static <T> void traversePreOrderNR(Consumer<T> valueProcessor, Node<T> rootNode) {
@@ -23,8 +27,8 @@ public class Tree<VALUE_TYPE> {
         while (!nodesToProcess.isEmpty()) {
             Node<T> node = nodesToProcess.pop();
             valueProcessor.accept(node.value);
-            if (node.left.isPresent()) nodesToProcess.add(node.left());
-            if (node.right.isPresent()) nodesToProcess.add(node.right());
+            if (node.left.isPresent()) nodesToProcess.add(node.left().get());
+            if (node.right.isPresent()) nodesToProcess.add(node.right().get());
         }
     }
 
@@ -61,12 +65,12 @@ public class Tree<VALUE_TYPE> {
             return right.get();
         }
 
-        Node<VALUE_TYPE> left(){
-            return left.get();
+        Optional<Node<VALUE_TYPE>> left(){
+            return left;
         }
 
-        Node<VALUE_TYPE> right(){
-            return right.get();
+        Optional<Node<VALUE_TYPE>> right(){
+            return right;
         }
 
         VALUE_TYPE value(){
@@ -75,7 +79,7 @@ public class Tree<VALUE_TYPE> {
 
 
         boolean isLeaf(){
-            return left==null&&right==null;
+            return (!left.isPresent())&&(!right.isPresent());
         }
 
         @Override
