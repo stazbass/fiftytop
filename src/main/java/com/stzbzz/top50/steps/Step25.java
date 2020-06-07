@@ -26,29 +26,17 @@ public class Step25 implements Solution {
         tree.root.right("5");
         tree.root.right().get().right("6");
 
-        traverseInOrderNR(tree.root, val-> System.out.printf("%s ", val));
+        traverseInOrder(tree.root, val-> System.out.printf("%s ", val));
     }
 
-    static <T>void traverseInOrderNR(Tree.Node<T> root, Consumer<T> processor){
-        Stack<Tree.Node<T>> nodesToProcess = new Stack<>();
-        Optional<Tree.Node<T>> currentNode = Optional.of(root);
-
-        while (currentNode.isPresent() || !nodesToProcess.isEmpty()){
-            if(currentNode.isPresent()){
-                nodesToProcess.push(currentNode.get());
-                currentNode = currentNode.get().left();
-            }else{
-                if(!nodesToProcess.isEmpty()){
-                    currentNode = Optional.of(nodesToProcess.pop());
-                    processor.accept(currentNode.get().value);
-                    currentNode = currentNode.get().right();
-                }
-            }
-        }
+    static <T> void traverseInOrder(Tree.Node<T> root, Consumer<T> processor){
+        if(root.left.isPresent())traverseInOrder(root.left.get(), processor);
+        processor.accept(root.value);
+        if(root.right.isPresent())traverseInOrder(root.right.get(), processor);
     }
 
     @Override
     public String toString() {
-        return "In order binary tree traversal";
+        return "In-order binary tree traversal recursion";
     }
 }
